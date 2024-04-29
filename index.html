@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/Poster.js"></script>
+
+  </head>
+  <body>
+    <a-scene background="color":#90caf9>
+        <!--ground-->
+        <a-plane
+        id="ground"
+        color="#78909c"
+        width="200"
+        height="100"
+        rotation="-90 0 0"
+        ></a-plane>
+        <!--poster container-->
+        <a-entity id="Poster container" comics-posters></a-entity>
+        <a-camera id="camera" wasd-controls="enable:false"; position="0 10 20"></a-camera>
+        <a-entity
+        id="app-title"
+        position="0 0.73 -1"
+        text="font:exo2bold ; align:center;  color=#000 ; value:Virtual Comic Store; width=2" 
+        ></a-entity>
+        <a-entity
+        id="app-subtitle"
+        position="0 -0.1 0"
+        text="font:dejavu ; align:center;  color=#0F184E ; value:get your favourite Comic; width=1" 
+        ></a-entity>
+        <a-entity
+        id ="fadeBackground"
+        geometry="primitive: sphere; radius:2.5"
+        material="color:black; side:back ;shader:flat; transparent:true;opacity:0.6"
+        visible="false"
+        cursor-listener
+        ></a-entity>
+    </a-scene>
+
+    
+  </body>
+</html>
